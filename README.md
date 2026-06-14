@@ -1,29 +1,69 @@
-# 🌦️ Weather App v1.0
+# 🌦️ Weather App v2.0
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
-![Version](https://img.shields.io/badge/Version-1.0-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Version](https://img.shields.io/badge/Version-2.0-success)
+![GUI](https://img.shields.io/badge/GUI-Tkinter-orange)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Requests](https://img.shields.io/badge/Requests-Library-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-A simple and beginner-friendly weather application built with Python. This project fetches real-time weather data using the OpenWeatherMap API and displays useful weather information directly in the terminal.
+A modern weather application built with Python that provides real-time weather information through both a **Command Line Interface (CLI)** and a **Graphical User Interface (GUI)**. The project follows a modular architecture, making it easy to maintain, extend, and contribute to.
 
 ---
 
 ## ✨ Features
 
-* 🌡️ Current temperature
-* 💧 Humidity information
-* ☁️ Weather conditions
-* 🔍 Search weather by city name
-* 🛠️ Clean and modular code structure
-* 📦 Easy to extend for future GUI versions
+### 🌍 Weather Information
+
+* Real-time weather data
+* Temperature in Celsius
+* Humidity percentage
+* Weather condition description
+* City-based weather search
+
+### 💻 CLI Version
+
+* Fast and lightweight
+* Simple terminal interface
+* Easy to use
+
+### 🖥️ GUI Version
+
+* Built with Tkinter
+* User-friendly interface
+* Instant weather lookup
+* Clean and responsive layout
+
+### 🏗️ Developer-Friendly
+
+* Modular architecture
+* Environment variable support
+* Easy API replacement
+* GitHub-ready project structure
+
+---
+
+## 📸 Screenshots
+
+### GUI Interface
+
+```text id="q5z4dn"
+[ Add your GUI screenshot here ]
+
+screenshots/
+└── gui.png
+```
+
+After adding screenshots:
+
+```markdown id="5mrjvh"
+![GUI Preview](screenshots/gui.png)
+```
 
 ---
 
 ## 📂 Project Structure
 
-```text
+```text id="e8gg9g"
 weather-app/
 │
 ├── weather/
@@ -33,131 +73,187 @@ weather-app/
 │   └── formatter.py
 │
 ├── cli.py
-├── requirements.txt
+├── gui.py
+│
+├── screenshots/
+│   └── gui.png
+│
 ├── .env.example
 ├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🚀 Installation
+## ⚙️ Installation
 
-### 1. Clone the Repository
+### Clone Repository
 
-```bash
+```bash id="g44b5o"
 git clone https://github.com/caffineblud/weather-app.git
 cd weather-app
 ```
 
-### 2. Create Virtual Environment
+### Create Virtual Environment
 
-```bash
+```bash id="on2g4t"
 python -m venv venv
 ```
 
-Activate it:
+### Activate Environment
 
 **Windows**
 
-```bash
+```bash id="q55vjv"
 venv\Scripts\activate
 ```
 
-**Linux / macOS**
+**Linux/macOS**
 
-```bash
+```bash id="dbvfpg"
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+### Install Dependencies
 
-```bash
+```bash id="vgsbh7"
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🔑 API Setup
+## 🔑 API Configuration
 
-Create a `.env` file in the project root:
+Create a `.env` file:
 
-```env
+```env id="g8fkrv"
 API_KEY=YOUR_API_KEY_HERE
 ```
 
-Get a free API key from OpenWeatherMap.
+Example `.env.example`:
+
+```env id="l4k37n"
+API_KEY=YOUR_API_KEY_HERE
+```
 
 ---
 
-## ▶️ Running the Application
+## 🚀 Running the Application
 
-```bash
+### CLI Version
+
+```bash id="gf4ig4"
 python cli.py
 ```
 
-Example:
+### GUI Version
 
-```text
-Enter city: Delhi
-
-Weather Report
-------------------------------
-City: Delhi
-Temperature: 35°C
-Humidity: 60%
-Condition: Clear Sky
+```bash id="igce9k"
+python gui.py
 ```
 
 ---
 
-## 🧰 Technologies Used
+## 🧠 Architecture
 
-* Python
-* Requests
-* OpenWeatherMap API
-* Python Dotenv
+```text id="vbkhrm"
+User
+ │
+ ▼
+CLI / GUI
+ │
+ ▼
+Formatter Layer
+ │
+ ▼
+API Layer
+ │
+ ▼
+OpenWeatherMap API
+```
+
+This separation ensures:
+
+* Better maintainability
+* Easier testing
+* Faster feature additions
+* Cleaner codebase
 
 ---
 
-## 📈 Roadmap
+## 🛠️ Technologies Used
 
-### Version 1.0
+* Python
+* Tkinter
+* Requests
+* Python Dotenv
+* OpenWeatherMap API
 
-* [x] Terminal Interface
-* [x] Real-Time Weather Data
-* [x] Error Handling
+---
+
+## 📋 Requirements
+
+```text id="m2xkdd"
+requests
+python-dotenv
+```
+
+---
+
+## 🚧 Roadmap
+
+### v2.0
+
+* [x] CLI Weather Application
+* [x] Tkinter GUI
+* [x] API Integration
 * [x] Modular Structure
+* [x] Environment Variables
 
-### Version 2.0
+### v3.0
 
-* [ ] Tkinter GUI
 * [ ] Weather Icons
 * [ ] Search History
+* [ ] Auto Detect Location
+* [ ] Theme Switching
 
-### Version 3.0
+### v4.0
 
 * [ ] 5-Day Forecast
-* [ ] Dark Mode
-* [ ] Export Weather Report
+* [ ] Sunrise & Sunset Data
+* [ ] Wind Speed Information
+* [ ] Feels Like Temperature
+
+### v5.0
+
+* [ ] CustomTkinter UI
+* [ ] Charts & Graphs
+* [ ] Export Reports
+* [ ] Weather Analytics Dashboard
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome.
+Contributions are welcome.
 
-Feel free to fork the project and submit a pull request.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+Distributed under the MIT License.
 
 ---
 
-## Author:
-***Yash Kumar Singh***
+## 👨‍💻 Author
 
-### ⭐ If you found this project useful, consider giving it a star!
+**Yash Kumar Singh**
+
+If you like this project, consider giving it a ⭐ on GitHub.
